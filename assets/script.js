@@ -8,18 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let drawing = false;
 
-
-// Tool buttons
-document.getElementById("tool-brush").addEventListener("click", () => setTool('brush'));
-document.getElementById("tool-rect").addEventListener("click", () => setTool('rect'));
-document.getElementById("tool-circle").addEventListener("click", () => setTool('circle'));
-
-function setTool(tool) {
-  currentTool = tool;
-  document.querySelectorAll("#tool-brush, #tool-rect, #tool-circle").forEach(btn => btn.classList.remove('active'));
-  document.getElementById("tool-" + tool).classList.add('active');
-}
-    
   canvas.addEventListener("mousedown", () => drawing = true);
   canvas.addEventListener("mouseup", () => drawing = false);
   canvas.addEventListener("mousemove", draw);
