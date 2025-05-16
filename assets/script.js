@@ -83,21 +83,21 @@ canvas.addEventListener("mouseup", e => {
   }
 });
     
-//   canvas.addEventListener("mousedown", () => drawing = true);
-//   canvas.addEventListener("mouseup", () => drawing = false);
-//   canvas.addEventListener("mousemove", draw);
+  canvas.addEventListener("mousedown", () => drawing = true);
+  canvas.addEventListener("mouseup", () => drawing = false);
+  canvas.addEventListener("mousemove", draw);
 
-//   function draw(e) {
-//     if (!drawing) return;
-//     const rect = canvas.getBoundingClientRect();
-//     ctx.lineWidth = brushSize.value;
-//     ctx.lineCap = "round";
-//     ctx.strokeStyle = colorPicker.value;
-//     ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
-//     ctx.stroke();
-//     ctx.beginPath();
-//     ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
-//   }
+  function draw(e) {
+    if (!drawing) return;
+    const rect = canvas.getBoundingClientRect();
+    ctx.lineWidth = brushSize.value;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = colorPicker.value;
+    ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+  }
 
   clearBtn.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
