@@ -22,6 +22,9 @@ add_shortcode('canvas_crafter', function () {
         <div class="controls">
             <label>Color: <input type="color" id="color-picker" value="#000000"></label>
             <label>Brush Size: <input type="range" id="brush-size" min="1" max="20" value="5"></label>
+               <button id="tool-brush">✏️ Brush</button>
+            <button id="tool-rectangle">▭ Rectangle</button>
+            <button id="tool-circle">◯ Circle</button>
             <button id="clear-canvas">Clear</button>
             <button id="save-canvas">Save as PNG</button>
         </div>
