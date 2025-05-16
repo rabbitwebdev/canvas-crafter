@@ -9,7 +9,7 @@ Author: Pip (with a hint of AI wizardry)
 // Enqueue assets
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('canvas-crafter-style', plugin_dir_url(__FILE__) . 'assets/style.css');
-    wp_enqueue_script('visualscript-lib', 'https://cdn.jsdelivr.net/npm/visualscript@1.2.0/dist/visualscript.min.js', [], null, true);
+wp_enqueue_script('visualscript-lib', plugin_dir_url(__FILE__) . 'assets/VSON.js', [], null, true);
     wp_enqueue_script('canvas-crafter-script', plugin_dir_url(__FILE__) . 'assets/script.js', ['visualscript-lib'], null, true);
 });
 
